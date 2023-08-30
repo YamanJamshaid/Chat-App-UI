@@ -1,24 +1,42 @@
 {
-  "name": "live-chat-app",
-  "version": "1.0.0",
-  "description": "A Real-Time Chat that allows users to join chat rooms and communicate with each other instantly.\r <br>\r built using Node.js & Socket.IO & React, and Styled-Components.",
-  "main": "index.js",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-scripts": "5.0.1",
+    "socket.io-client": "^4.6.0",
+    "styled-components": "^5.3.6",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "server": "cd server && node server.js",
-    "install:client": "cd client && npm install",
-    "install:server": "cd server && npm install",
-    "build:client": "npm run install:client && cd client && npm run build && mkdir -p ../server/public && cp -r build/* ../server/public",
-    "build:server": "npm run install:server",
-    "build": "npm run build:client && npm run build:server"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IdoBouskila/live-chat-app.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/IdoBouskila/live-chat-app/issues"
-  },
-  "homepage": "https://github.com/IdoBouskila/live-chat-app#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
